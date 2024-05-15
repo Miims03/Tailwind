@@ -4,7 +4,14 @@
 
 @tailwind utilities;
 
-.la{
-    transform: translateX();
+.LogoBig{
+    background: url('./assets/bannière-V2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+.LogoSimple{
+    background: url('./assets/logo-simple-V2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}

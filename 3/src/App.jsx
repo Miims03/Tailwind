@@ -10,13 +10,19 @@ import { Route, Routes } from 'react-router-dom'
 
 function App() {
 
+  const lesRoutes = [
+    {path: "/", element: Home},
+    {path: "/about", element: About},
+  ]
+
   return (
-    <div>
+    <div className='h-screen bg-zinc-50'>
       <Indic />
       <NavBar />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>} />
+        {lesRoutes.map((route, index) => (
+          <Route key={index} path={route.path} element={<route.element/>} />
+        ))}
       </Routes>
 
 
